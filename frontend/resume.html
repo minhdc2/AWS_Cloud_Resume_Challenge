@@ -1,0 +1,298 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="Aspose.Words for .NET 22.7.0" />
+    <title></title>
+</head>
+
+<body style="margin-left:220pt;font-family:'Times New Roman';font-size:12pt">
+    <div>
+        <p style="font-size:9.5pt">Visits Count: <span id="visits"></span></p>
+        <script>
+                // setup
+                var myHeaders = new Headers();
+                var raw = JSON.stringify({
+                        "add": 1
+                })
+                var postRequestParameters = {
+                        method: "POST",
+                        headers: myHeaders,
+                        body: raw,
+                        redirect: "follow"
+                };
+
+                function startGETRequest(postRequestStatus) {
+                        if (postRequestStatus.toString() == "200") {
+                                // perform GET request
+                                fetch('https://iftm5a9ou6.execute-api.us-east-1.amazonaws.com/dev/resource')
+                                .then(response => response.json())
+                                .then(text => {
+                                        bodyContent = text.body;
+                                        visitsCount = JSON.parse(bodyContent).visitsCount;
+                                        document.querySelector("#visits").textContent = visitsCount;
+                                });
+                        } else {
+                                visitsCount = "Sorry, your visit has not been counted. Please refresh again!";
+                                document.querySelector("#visits").textContent = visitsCount;
+                        }
+                }
+
+                // perform POST request
+                fetch("https://iftm5a9ou6.execute-api.us-east-1.amazonaws.com/dev/post", postRequestParameters)
+                .then(response => response.status)
+                .then(status => startGETRequest(status))
+        </script>
+        <p style="margin-top:0pt; margin-left:224.8pt; margin-bottom:0pt; text-align:justify; line-height:17.65pt"><span
+                style="font-size:16pt; font-weight:bold">Minh Dinh </span></p>
+        <p style="margin-top:0.25pt; margin-left:171.75pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt">
+            <span style="font-size:9.5pt">Londonderry St, Oshawa, </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">ON,</span><span style="font-size:9.5pt"> L1J6Z3, Canada
+            </span></p>
+        <p style="margin-top:0.05pt; margin-left:37.35pt; margin-bottom:0pt; text-align:justify; line-height:12pt"><span
+                style="font-size:9.5pt">+1 (437) 599-8014</span><span style="font-family:Calibri; font-size:9.5pt">
+            </span><span style="font-size:9.5pt">|</span><a href="mailto:minhdinh@trentu.ca"
+                style="text-decoration:none"><span
+                    style="font-family:Calibri; font-size:9.5pt; color:#000000; -aw-import:spaces">&#xa0;</span><span
+                    style="font-size:9.5pt; text-decoration:underline; color:#0563c1">minhdinh@trentu.ca</span><span
+                    style="font-size:9.5pt; color:#000000"> </span></a><span style="font-size:9.5pt">/</span><a
+                href="mailto:minhdinh1305@gmail.com" style="text-decoration:none"><span
+                    style="font-size:9.5pt; color:#000000; -aw-import:spaces">&#xa0;</span><span
+                    style="font-size:9.5pt; text-decoration:underline; color:#0563c1">minhdinh1305@gmail.com</span><span
+                    style="font-size:9.5pt; color:#000000"> </span></a><span style="font-size:9.5pt">|</span><a
+                href="https://www.linkedin.com/in/minhdinh1305/" style="text-decoration:none"><span
+                    style="font-size:9.5pt; color:#000000; -aw-import:spaces">&#xa0;</span><span
+                    style="font-size:9.5pt; text-decoration:underline; color:#0563c1">Minh Dinh | LinkedIn</span><span
+                    style="font-size:9.5pt; color:#0563c1"> </span></a><span style="font-size:9.5pt">|</span><a
+                href="https://github.com/minhdc2" style="text-decoration:none"><span
+                    style="font-size:9.5pt; color:#000000; -aw-import:spaces">&#xa0;</span><span
+                    style="font-size:9.5pt; text-decoration:underline; color:#0563c1">minhdc2 (github.com)</span><span
+                    style="font-size:9.5pt; color:#000000"> </span></a></p>
+        <p style="margin-top:11pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold; text-decoration:underline">PROFESSIONAL EXPERIENCE </span></p>
+        <p style="margin-top:1.8pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold">Abeam Consulting (Vietnam)</span><span
+                style="font-size:9.5pt"> </span><span style="font-size:9.5pt; font-weight:bold">| </span><span
+                style="font-size:9.5pt">Data Management &amp; Analytics, Senior Data Engineer, HCM, VN </span><span
+                style="font-size:9.5pt; letter-spacing:52.05pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">Apr, 2022 – Dec, 2022 </span></p>
+        <p
+            style="width:60%;margin-top:0.95pt; margin-left:7.55pt; margin-bottom:0pt; text-indent:-7.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:4.17pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:4.17pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Core developer in a datamart development project
+            </span><span style="font-size:9.5pt; letter-spacing:0.05pt">for</span><span style="font-size:9.5pt"> a
+                Singapore educational institution: </span></p>
+        <p
+            style="width:60%;margin-top:0.6pt; margin-left:13.1pt; margin-bottom:0pt; text-indent:-5.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:1; -aw-list-number-format:'-'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:3.1pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">-</span><span
+                    style="width:3.1pt;font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;
+                </span></span><span style="font-size:9.5pt">Collaborate with Singaporean colleagues to design data
+                loading’s framework from source to datawarehouse </span></p>
+        <p
+            style="width:60%;margin-top:0.05pt; margin-left:13.1pt; margin-bottom:0pt; text-indent:-5.55pt; line-height:10.9pt; -aw-import:list-item; -aw-list-level-number:1; -aw-list-number-format:'-'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:3.1pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">-</span><span
+                    style="width:3.1pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;
+                </span></span><span style="font-size:9.5pt">Develop ETL pipelines using Azure Data Factory (ADF), which
+                includes: loading data from external files source, cleansing and transformation, dynamic </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">SQL</span><span style="font-size:9.5pt"> queries to
+                automate repetitive tasks </span></p>
+        <p
+            style="width:60%;margin-top:0.9pt; margin-left:7.55pt; margin-bottom:0pt; text-indent:-7.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:4.17pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:4.17pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Provide Machine Learning training using Python to new
+                graduates from </span><span style="font-size:9.5pt; letter-spacing:0.05pt">Indonesia,</span><span
+                style="font-size:9.5pt"> Singapore and Vietnam. </span></p>
+        <p
+            style="width:60%;margin-top:1.05pt; margin-left:7.55pt; margin-bottom:0pt; text-indent:-7.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:4.17pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:4.17pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Provide Power BI training to a big Japanese manufacturing
+                company in Vietnam including M-query, DAX, charts. </span></p>
+        <p style="margin-top:11.5pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold">MCI Consulting &amp; Analytics |</span><span
+                style="font-size:9.5pt"> SQL &amp; Python ML Lecturer (Part-time), HN &amp; HCM, VN</span><span
+                style="font-size:9.5pt; letter-spacing:81.2pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">Mar, 2020 – Dec, 2022 </span></p>
+        <p
+            style="width:60%;margin-top:0.95pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Design and revise </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">SQL</span><span style="font-size:9.5pt"> and Python ML
+                training courses for individual students and corporates. </span></p>
+        <p
+            style="width:60%;margin-top:3pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Lectured over 50 classes and around 1,000 students. </span>
+        </p>
+        <p style="margin-top:13.15pt; margin-bottom:0pt; line-height:10.9pt"><span
+                style="font-size:9.5pt; font-weight:bold">PricewaterhouseCoopers (Vietnam) | </span><span
+                style="font-size:9.5pt">Risk Consulting, Senior Data Engineer cum Credit Risk Modeler,</span><span
+                style="font-size:9.5pt; letter-spacing:25.5pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">May, 2021 – Apr, 2022</span></p>
+        <p style="margin-top:0pt;margin-bottom:0pt;font-size:9.5pt"><span>HCM, VN</span></p>
+        <p
+            style="width:60%;margin-top:0.95pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Lead engineer in a Credit Scoring project with contract
+                value above 500,000$ for a medium-size commercial bank in Vietnam: </span></p>
+        <p
+            style="width:60%;margin-top:2.4pt; margin-left:14.2pt; margin-bottom:0pt; text-indent:-5.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'-'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:3.1pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">-</span><span
+                    style="width:3.1pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;
+                </span></span><span style="font-size:9.5pt">Develop Python built-in functions library </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">for</span><span style="font-size:9.5pt"> model
+                development </span></p>
+        <p
+            style="width:60%;margin-top:2.5pt; margin-left:14.2pt; margin-bottom:0pt; text-indent:-5.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'-'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:3.1pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">-</span><span
+                    style="width:3.1pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;
+                </span></span><span style="font-size:9.5pt">Work with team to develop PL/SQL ETL pipelines to process
+                data for around 2,000 features </span></p>
+        <p
+            style="width:60%;margin-top:2.4pt; margin-left:14.2pt; margin-bottom:0pt; text-indent:-5.55pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'-'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:3.1pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">-</span><span
+                    style="width:3.1pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;
+                </span></span><span style="font-size:9.5pt">Work closely with PwC Hong Kong to design workflows
+            </span><span style="font-size:9.5pt; letter-spacing:0.05pt">for</span><span style="font-size:9.5pt">
+            </span><span style="font-size:9.5pt; letter-spacing:0.1pt">AI</span><span style="font-size:9.5pt"> models
+                and align the project’s progress between </span><span
+                style="font-size:9.5pt; letter-spacing:0.6pt">VN</span><span style="font-size:9.5pt"> and HK team.
+            </span></p>
+        <p style="margin-top:13.55pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold">Vietnam Technological and Commercial Joint-stock Bank |
+            </span><span style="font-size:9.5pt">Data Engineer, Hanoi, VN </span><span
+                style="font-size:9.5pt; letter-spacing:85.05pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">Apr, 2019 – May, 2021 </span></p>
+        <p
+            style="width:60%;margin-top:0.95pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Work with team to develop and maintain PL/SQL ETL pipelines
+            </span><span style="font-size:9.5pt; letter-spacing:0.05pt">for</span><span style="font-size:9.5pt"> around
+                2,000 features </span></p>
+        <p
+            style="width:60%;margin-top:3.1pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Develop monitoring, logging procedures to track status of
+                ETL pipelines </span></p>
+        <p
+            style="width:60%;margin-top:2.55pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; line-height:10.9pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Develop and maintain </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">ML</span><span style="font-size:9.5pt"> models run on
+                monthly basis, which includes: customer churn prediction, customer classification for home- loan product
+            </span></p>
+        <p
+            style="width:60%;margin-top:2.95pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Develop Power BI dashboard to visualize the fluctuation of
+                bank’s CASA balance by smaller contributing components over months. </span></p>
+        <p style="margin-top:13.55pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold">Deloitte Touche Tohmatsu Limited (Vietnam) | </span><span
+                style="font-size:9.5pt">Risk Advisory, Analyst, Hanoi, VN </span><span
+                style="font-size:9.5pt; letter-spacing:99.45pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">Feb, 2017 – Apr, 2019 </span></p>
+        <p
+            style="width:60%;margin-top:0.5pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; line-height:10.9pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Use SQL and ACL to clean and analyze dataset of
+                multi-million lines extracted from systems: Oracle, SAP, unstructured </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">manual- </span><span style="font-size:9.5pt">prepared
+                source to reconcile GL, TB and identify unusual entries. </span></p>
+        <p
+            style="width:60%;margin-top:2.95pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Perform data cleansing and analytics </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">for</span><span style="font-size:9.5pt"> credit modelling
+                team </span></p>
+        <p
+            style="width:60%;margin-top:2.8pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; line-height:10.75pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Perform ITGCs testing </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">for</span><span style="font-size:9.5pt"> different types
+                of systems including MSSQL, Oracle and SAP which varies from electricity, telecom, manufacturing,
+                hospitality, insurance to banking industry. </span></p>
+        <p style="margin-top:13.55pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold">PricewaterhouseCoopers (Vietnam) | </span><span
+                style="font-size:9.5pt">Risk Assurance, Associate, Hanoi, VN</span><span
+                style="font-size:9.5pt; font-weight:bold"> </span><span
+                style="font-size:9.5pt; letter-spacing:128.85pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">Aug, 2016 – Jan, 2017 </span></p>
+        <p
+            style="width:60%;margin-top:0.95pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Perform IT control testing based on practice standards e.g
+                ISO27001, COBIT,… </span></p>
+        <p
+            style="width:60%;margin-top:3.1pt; margin-left:8.65pt; margin-bottom:0pt; text-indent:-8.65pt; text-align:justify; line-height:10.45pt; -aw-import:list-item; -aw-list-level-number:0; -aw-list-number-format:'•'; -aw-list-number-styles:'bullet'; -aw-list-padding-sml:5.27pt">
+            <span style="-aw-import:ignore"><span style="font-size:9.5pt">•</span><span
+                    style="width:5.27pt; font:7pt 'Times New Roman'; display:inline-block; -aw-import:spaces">&#xa0;&#xa0;&#xa0;
+                </span></span><span style="font-size:9.5pt">Report to audit team about IT operation’s deficiencies which
+                may expose risk to data presentation on financial statements. </span></p>
+        <p style="margin-top:13.55pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-weight:bold; text-decoration:underline">EDUCATION </span></p>
+        <p style="margin-top:1.25pt; margin-right:9.05pt; margin-bottom:0pt; line-height:11pt"><span
+                style="font-size:9.5pt; font-weight:bold">Master </span><span
+                style="font-size:9.5pt; font-weight:bold; letter-spacing:0.05pt">of</span><span
+                style="font-size:9.5pt; font-weight:bold"> Science</span><span style="font-size:9.5pt">, Big Data
+                Analytics: Applied Modelling and Quantitative Methods</span><span
+                style="font-size:9.5pt; font-weight:bold"> </span><span
+                style="font-size:9.5pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt; letter-spacing:97.75pt"> </span><span style="font-size:9.5pt">Jan, 2023 -
+                Present</span></p>
+                <p style="margin-top:0pt;margin-bottom:0pt;font-size:9.5pt"><span>Trent University, Peterborough, ON, Canada</span></p>
+        <p style="margin-top:0.45pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt">Courses: </span><span style="font-size:9.5pt; font-style:italic">Foundations of
+                Modelling, Mathematical Aspects of Modelling, Computational Aspects of Modelling, </span></p>
+        <p style="margin-top:0.45pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-style:italic">Statistical Aspects of Modelling, Data Analytics with R, High
+                Performance Computing, Big Data, Data </span></p>
+        <p style="margin-top:0.5pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-style:italic">Mining, Introduction to Databases, Data
+                Visualization</span><span style="font-size:9.5pt; font-weight:bold"> </span></p>
+        <p style="margin-top:10.95pt; margin-bottom:0pt; line-height:10.9pt"><span
+                style="font-size:9.5pt; font-weight:bold">Bachelor of Arts</span><span
+                style="font-size:9.5pt">,</span><span style="font-size:9.5pt; -aw-import:spaces">&#xa0; </span><span
+                style="font-size:9.5pt">Finance and Banking, GPA: 3.34/4.00 </span><span
+                style="font-size:9.5pt; letter-spacing:208.55pt; -aw-import:spaces">&#xa0;</span><span
+                style="font-size:9.5pt">Sep, 2012 – Jul, 2016</span></p>
+        <p style="margin-top:0pt;margin-bottom:0pt;font-size:9.5pt"><span>National Economics University, Hanoi, Vietnam</span></p>
+        <p style="margin-top:0.45pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt">Courses: </span><span style="font-size:9.5pt; font-style:italic">Econometrics,
+                Statistics and Probability, Linear Algebra and Calculus, Financial Analysis, Stock </span></p>
+        <p style="margin-top:0.45pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt; font-style:italic">Analysis and Investment, Corporate Finance.</span><span
+                style="font-size:9.5pt; font-weight:bold"> </span></p>
+        <p style="margin-top:11.5pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt">
+                <span style="font-size:9.5pt; font-weight:bold; text-decoration:underline">TECHNICAL SKILLS </span><span
+                style="font-size:9.5pt; font-weight:bold; -aw-import:spaces">&#xa0;</span></p>
+        <p style="margin-top:1.35pt; margin-right:107.75pt; margin-bottom:0pt; line-height:10.9pt"><span
+                style="font-size:9.5pt">Programming languages: </span><span
+                style="font-size:9.5pt; letter-spacing:0.05pt">SQL</span><span style="font-size:9.5pt"> (MSSQL, Oracle),
+                Python (pandas, numpy, scikit-learn, pySpark), R, Scala</span></p>
+        <p style="margin-top:0pt;margin-bottom:0pt;font-size:9.5pt"><span>Visualization Tools: Power BI</span></p>
+        <p style="margin-top:0.45pt; margin-bottom:0pt; text-align:justify; line-height:10.45pt"><span
+                style="font-size:9.5pt">Cloud services: AWS, Microsoft Azure, GCP </span></p>
+        <p style="margin-top:0.45pt; margin-bottom:0pt; text-align:justify; line-height:12pt"><span
+                style="font-size:9.5pt">Certification: AWS SAA </span><a
+                href="https://www.credly.com/badges/eee8d58b-2de3-4aa3-b92d-ba1887cb9d66/public_url"
+                style="text-decoration:none"><span style="font-size:9.5pt; color:#000000">(</span><span
+                    style="font-size:9.5pt; text-decoration:underline; color:#954f72">https://www.credly.com/badges/eee8d58b-2de3-4aa3-b92d-ba1887cb9d66/public_url</span><span
+                    style="font-size:9.5pt; color:#000000">)</span></a><span style="font-size:9.5pt">. </span></p>
+    </div>
+</body>
+
+</html>
