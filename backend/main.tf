@@ -1,18 +1,18 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
+# terraform {
+#   required_providers {
+#     aws = {
+#       source = "hashicorp/aws"
+#       version = "~> 4.16"
+#     }
+#   }
 
-  required_version = ">= 1.2.0"
-}
+#   required_version = ">= 1.2.0"
+# }
 
-provider "aws" {
-  # Configuration options
-  region = "us-east-1" # (1)
-}
+# provider "aws" {
+#   # Configuration options
+#   region = "us-east-1" # (1)
+# }
 
 # 1. Configure DynamoDB
 resource "aws_dynamodb_table" "VisitDetails" {
