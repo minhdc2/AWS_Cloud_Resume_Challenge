@@ -1,19 +1,19 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
+# terraform {
+#   required_providers {
+#     aws = {
+#       source = "hashicorp/aws"
+#       version = "~> 4.16"
+#     }
+#   }
 
-  # backend "s3" {
-  #   bucket = "myresume-us-east-1" # change to name of your bucket
-  #   region = "us-east-1"          # change to your region
-  #   key    = "terraform.tfstate"
-  # }
+#   # backend "s3" {
+#   #   bucket = "myresume-us-east-1" # change to name of your bucket
+#   #   region = "us-east-1"          # change to your region
+#   #   key    = "terraform.tfstate"
+#   # }
 
-  required_version = ">= 1.2.0"
-}
+#   required_version = ">= 1.2.0"
+# }
 
 # provider "aws" {
 #   # Configuration options
