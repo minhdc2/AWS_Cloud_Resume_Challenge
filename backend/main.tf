@@ -6,6 +6,12 @@ terraform {
     }
   }
 
+  backend "s3" {
+    bucket = "myresume-us-east-1" # change to name of your bucket
+    region = "us-east-1"          # change to your region
+    key    = "terraform.tfstate"
+  }
+
   required_version = ">= 1.2.0"
 }
 
