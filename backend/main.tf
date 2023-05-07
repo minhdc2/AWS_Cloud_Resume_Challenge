@@ -61,7 +61,7 @@ data "aws_iam_policy_document" "BasicReadWriteDynamoDB" {
                 "dynamodb:UpdateItem",
                 "dynamodb:GetRecords"]
     
-    resources = ["arn:aws:dynamodb:us-east-1:877723921575:table/VisitDetails"] # (2)
+    resources = [aws_dynamodb_table.VisitDetails.arn] # (2)
   }
 }
 
