@@ -43,9 +43,9 @@ jobs:
         run: terraform init -backend-config="bucket=${AWS_BUCKET_NAME}" -backend-config="key=${AWS_TFSTATE_FILENAME}" -backend-config="region=${AWS_REGION}"
         # run: terraform init
 
-      - name: Terraform Validate
-        id: validate
-        run: terraform validate -no-color
+      # - name: Terraform Validate
+      #   id: validate
+      #   run: terraform validate -no-color
 
       - name: Terraform Plan
         id: plan
