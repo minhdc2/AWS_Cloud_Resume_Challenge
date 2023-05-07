@@ -20,29 +20,29 @@ provider "aws" {
   region = "us-east-1" # (1)
 }
 
-# 1. Configure DynamoDB
-resource "aws_dynamodb_table" "VisitDetails" {
-  name           = "VisitDetails"
-  billing_mode   = "PROVISIONED"
-  read_capacity  = 20
-  write_capacity = 20
-  hash_key         = "timestamp"
+# # 1. Configure DynamoDB
+# resource "aws_dynamodb_table" "VisitDetails" {
+#   name           = "VisitDetails"
+#   billing_mode   = "PROVISIONED"
+#   read_capacity  = 20
+#   write_capacity = 20
+#   hash_key         = "timestamp"
 
-  attribute {
-    name = "timestamp"
-    type = "S"
-  }
+#   attribute {
+#     name = "timestamp"
+#     type = "S"
+#   }
 
-  tags = {
-    Name        = "VisitDetails"
-    Environment = "production"
-  }
-}
+#   tags = {
+#     Name        = "VisitDetails"
+#     Environment = "production"
+#   }
+# }
 
-module  "table_autoscaling" {
-   source = "snowplow-devops/dynamodb-autoscaling/aws" 
-   table_name = aws_dynamodb_table.VisitDetails.name
-}
+# module  "table_autoscaling" {
+#    source = "snowplow-devops/dynamodb-autoscaling/aws" 
+#    table_name = aws_dynamodb_table.VisitDetails.name
+# }
 
 # 2. Configure IAM policy allowing Lambda function to connect to DynamoDB
 data "aws_iam_policy_document" "BasicReadWriteDynamoDB" {
