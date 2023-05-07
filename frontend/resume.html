@@ -26,7 +26,7 @@
                 function startGETRequest(postRequestStatus) {
                         if (postRequestStatus.toString() == "200") {
                                 // perform GET request
-                                fetch('https://iftm5a9ou6.execute-api.us-east-1.amazonaws.com/dev/resource')
+                                fetch('https://6vj9tff9lc.execute-api.us-east-1.amazonaws.com/dev/resource')
                                 .then(response => response.json())
                                 .then(text => {
                                         bodyContent = text.body;
@@ -40,7 +40,7 @@
                 }
 
                 // perform POST request
-                fetch("https://iftm5a9ou6.execute-api.us-east-1.amazonaws.com/dev/post", postRequestParameters)
+                fetch("https://6vj9tff9lc.execute-api.us-east-1.amazonaws.com/dev/post", postRequestParameters)
                 .then(response => response.status)
                 .then(status => startGETRequest(status))
         </script>
