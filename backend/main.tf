@@ -6,19 +6,19 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "myresume-us-east-1" # change to name of your bucket
-    region = "us-east-1"          # change to your region
-    key    = "terraform.tfstate"
-  }
+  # backend "s3" {
+  #   bucket = "myresume-us-east-1" # change to name of your bucket
+  #   region = "us-east-1"          # change to your region
+  #   key    = "terraform.tfstate"
+  # }
 
   required_version = ">= 1.2.0"
 }
 
-provider "aws" {
-  # Configuration options
-  region = "us-east-1" # (1)
-}
+# provider "aws" {
+#   # Configuration options
+#   region = "us-east-1" # (1)
+# }
 
 # 1. Configure DynamoDB
 resource "aws_dynamodb_table" "VisitDetails" {
